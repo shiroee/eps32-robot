@@ -1,0 +1,310 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" font-family="Arial, Helvetica, sans-serif">
+  <rect width="1600" height="1180" fill="#f7f5f0"/>
+
+  <!-- title + legend -->
+  <text x="40" y="70" font-size="38" font-weight="700" fill="#1b1b1b">Bot Display — wiring</text>
+  <text x="40" y="104" font-size="17" fill="#666">NodeMCU ESP8266 on NodeMCU Base · L298N · MG995 head · SSD1306 OLED · DFPlayer Mini · pins match src/main.cpp</text>
+  <g stroke-width="5" stroke-linecap="round">
+    <line x1="1140" y1="65" x2="1175" y2="65" stroke="#d62828"/>
+    <line x1="1265" y1="65" x2="1300" y2="65" stroke="#222"/>
+    <line x1="1385" y1="65" x2="1396" y2="65" stroke="#f07f13"/>
+    <line x1="1397" y1="65" x2="1408" y2="65" stroke="#2563eb"/>
+    <line x1="1409" y1="65" x2="1420" y2="65" stroke="#15803d"/>
+  </g>
+  <g font-size="15" fill="#444">
+    <text x="1183" y="70">power +</text>
+    <text x="1308" y="70">ground</text>
+    <text x="1428" y="70">signal</text>
+  </g>
+
+  <!-- panels -->
+  <g fill="#ffffff" stroke="#e2ddd2" stroke-width="1.5">
+    <rect x="30" y="130" width="790" height="815" rx="14"/>
+    <rect x="850" y="130" width="720" height="545" rx="14"/>
+    <rect x="850" y="695" width="720" height="455" rx="14"/>
+    <rect x="30" y="965" width="790" height="185" rx="14"/>
+  </g>
+
+  <!-- ============ 1. NodeMCU pins ============ -->
+  <circle cx="66" cy="161" r="14" fill="#1b1b1b"/>
+  <text x="66" y="167" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">1</text>
+  <text x="90" y="168" font-size="22" font-weight="700" fill="#1b1b1b">NodeMCU pins</text>
+  <text x="90" y="192" font-size="14" fill="#666">Hold the board antenna-up, USB-down. Gold pins are in use.</text>
+
+  <!-- wire stubs (under the pins) -->
+  <g stroke-width="5" stroke-linecap="round">
+    <line x1="495" y1="300" x2="580" y2="300" stroke="#f07f13"/>
+    <line x1="495" y1="340" x2="580" y2="340" stroke="#d9a400"/>
+    <line x1="495" y1="380" x2="580" y2="380" stroke="#2563eb"/>
+    <line x1="495" y1="500" x2="580" y2="500" stroke="#d62828"/>
+    <line x1="495" y1="540" x2="580" y2="540" stroke="#222"/>
+    <line x1="495" y1="580" x2="580" y2="580" stroke="#15803d"/>
+    <line x1="495" y1="620" x2="580" y2="620" stroke="#65a30d"/>
+    <line x1="495" y1="660" x2="580" y2="660" stroke="#be185d"/>
+    <line x1="495" y1="700" x2="580" y2="700" stroke="#ec4899"/>
+    <line x1="345" y1="820" x2="255" y2="820" stroke="#222"/>
+  </g>
+  <!-- D4 goes through the 1k resistor -->
+  <path d="M495 460 H518 l4 -8 l8 16 l8 -16 l8 16 l8 -16 l6 8 H580" fill="none" stroke="#7c3aed" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="540" y="445" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="middle">1kΩ</text>
+
+  <!-- board -->
+  <rect x="330" y="215" width="180" height="680" rx="10" fill="#1f2d3d"/>
+  <rect x="392" y="226" width="56" height="150" rx="3" fill="#2b3a4a" stroke="#41546a"/>
+  <path d="M398 250 h8 v-14 h8 v14 h8 v-14 h8 v14 h8 v-14 h6" fill="none" stroke="#d4a017" stroke-width="2"/>
+  <rect x="397" y="264" width="46" height="104" rx="2" fill="#b8c2cc"/>
+  <text x="420" y="640" font-size="22" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="3" transform="rotate(-90 420 640)">NodeMCU</text>
+  <rect x="396" y="895" width="48" height="22" rx="3" fill="#9e9e9e"/>
+  <text x="420" y="911" font-size="12" font-weight="700" fill="#333" text-anchor="middle">USB</text>
+
+  <!-- unused pins -->
+  <g fill="#4a5868">
+    <circle cx="345" cy="300" r="7"/><circle cx="345" cy="340" r="7"/><circle cx="345" cy="380" r="7"/>
+    <circle cx="345" cy="420" r="7"/><circle cx="345" cy="460" r="7"/><circle cx="345" cy="500" r="7"/>
+    <circle cx="345" cy="540" r="7"/><circle cx="345" cy="580" r="7"/><circle cx="345" cy="620" r="7"/>
+    <circle cx="345" cy="660" r="7"/><circle cx="345" cy="700" r="7"/><circle cx="345" cy="740" r="7"/>
+    <circle cx="345" cy="780" r="7"/><circle cx="345" cy="860" r="7"/>
+    <circle cx="495" cy="420" r="7"/><circle cx="495" cy="740" r="7"/><circle cx="495" cy="780" r="7"/>
+    <circle cx="495" cy="820" r="7"/><circle cx="495" cy="860" r="7"/>
+  </g>
+  <!-- used pins -->
+  <g fill="#f2b705" stroke="#7a5c00" stroke-width="1.5">
+    <circle cx="345" cy="820" r="7"/>
+    <circle cx="495" cy="300" r="7"/><circle cx="495" cy="340" r="7"/><circle cx="495" cy="380" r="7"/>
+    <circle cx="495" cy="460" r="7"/><circle cx="495" cy="500" r="7"/><circle cx="495" cy="540" r="7"/>
+    <circle cx="495" cy="580" r="7"/><circle cx="495" cy="620" r="7"/><circle cx="495" cy="660" r="7"/>
+    <circle cx="495" cy="700" r="7"/>
+  </g>
+
+  <!-- pin names on the board -->
+  <g font-size="13" fill="#7d8a99">
+    <text x="358" y="305">A0</text>
+    <text x="358" y="425">SD3</text><text x="358" y="465">SD2</text><text x="358" y="505">SD1</text>
+    <text x="358" y="545">CMD</text><text x="358" y="585">SD0</text><text x="358" y="625">CLK</text>
+    <text x="358" y="665">G</text><text x="358" y="705">3V</text><text x="358" y="745">EN</text>
+    <text x="358" y="785">RST</text><text x="358" y="865">VIN</text>
+  </g>
+  <g font-size="13" fill="#7d8a99" text-anchor="end">
+    <text x="482" y="425">D3</text><text x="482" y="745">RX</text><text x="482" y="785">TX</text>
+    <text x="482" y="825">G</text><text x="482" y="865">3V</text>
+  </g>
+  <g font-size="14" font-weight="700" fill="#ffffff">
+    <text x="358" y="825">G</text>
+  </g>
+  <g font-size="14" font-weight="700" fill="#ffffff" text-anchor="end">
+    <text x="482" y="305">D0</text><text x="482" y="345">D1</text><text x="482" y="385">D2</text>
+    <text x="482" y="465">D4</text><text x="482" y="505">3V</text><text x="482" y="545">G</text>
+    <text x="482" y="585">D5</text><text x="482" y="625">D6</text><text x="482" y="665">D7</text>
+    <text x="482" y="705">D8</text>
+  </g>
+
+  <!-- where each pin goes -->
+  <g font-size="16" font-weight="700" fill="#1b1b1b">
+    <text x="590" y="306">MG995 signal<tspan font-size="14" font-weight="400" fill="#777"> · orange wire</tspan></text>
+    <text x="590" y="346">OLED SCL</text>
+    <text x="590" y="386">OLED SDA</text>
+    <text x="590" y="466">DFPlayer RX<tspan font-size="14" font-weight="400" fill="#777"> · through 1kΩ</tspan></text>
+    <text x="590" y="506">OLED VCC</text>
+    <text x="590" y="546">OLED GND</text>
+    <text x="590" y="586">L298N IN1<tspan font-size="14" font-weight="400" fill="#777"> · left motor</tspan></text>
+    <text x="590" y="626">L298N IN2<tspan font-size="14" font-weight="400" fill="#777"> · left motor</tspan></text>
+    <text x="590" y="666">L298N IN3<tspan font-size="14" font-weight="400" fill="#777"> · right motor</tspan></text>
+    <text x="590" y="706">L298N IN4<tspan font-size="14" font-weight="400" fill="#777"> · right motor</tspan></text>
+  </g>
+  <g font-size="15" fill="#9a9a9a">
+    <text x="590" y="426">free · boot pin, avoid</text>
+    <text x="590" y="746">free</text>
+    <text x="590" y="786">free</text>
+    <text x="320" y="306" text-anchor="end">free</text>
+    <text x="320" y="866" text-anchor="end">no wire · the base powers it</text>
+  </g>
+  <g font-size="16" font-weight="700" fill="#1b1b1b" text-anchor="end">
+    <text x="245" y="826">L298N GND<tspan font-size="14" font-weight="400" fill="#777"> · shared ground</tspan></text>
+  </g>
+  <text x="54" y="915" font-size="13" fill="#888">All G pins are joined inside the board, so any one works.</text>
+
+  <!-- ============ 2. Power & motors ============ -->
+  <circle cx="886" cy="161" r="14" fill="#1b1b1b"/>
+  <text x="886" y="167" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">2</text>
+  <text x="910" y="168" font-size="22" font-weight="700" fill="#1b1b1b">Power &amp; motors</text>
+  <text x="910" y="192" font-size="14" fill="#666">The battery feeds both the L298N and the base's DC jack.</text>
+
+  <!-- wires first so the boxes cover their ends -->
+  <g fill="none" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M1165 375 V455 H1070" stroke="#d62828"/>
+    <path d="M1165 455 H1205 A10 10 0 0 1 1225 455 H1275 L1290 470" stroke="#d62828"/>
+    <path d="M1390 545 V565 H1405" stroke="#d62828"/>
+    <path d="M1215 375 V590" stroke="#222"/>
+    <path d="M1070 505 H1275 L1290 490" stroke="#222"/>
+    <path d="M1360 545 V590 H1405" stroke="#222"/>
+  </g>
+  <circle cx="1165" cy="455" r="7" fill="#d62828"/>
+  <circle cx="1215" cy="505" r="7" fill="#222"/>
+  <g fill="none" stroke="#777" stroke-width="4" stroke-linecap="round">
+    <path d="M1100 266 H1030 M1100 294 H1030"/>
+    <path d="M1370 266 H1440 M1370 294 H1440"/>
+  </g>
+  <text x="1157" y="420" font-size="13" font-weight="700" fill="#d62828" text-anchor="end">7.4V</text>
+  <text x="1265" y="400" font-size="12" fill="#999" text-anchor="middle">5V: no wire</text>
+  <g font-size="11" fill="#444" text-anchor="middle">
+    <text x="1262" y="524">barrel plug</text><text x="1262" y="538">center = +</text>
+  </g>
+  <text x="1203" y="565" font-size="13" fill="#444" text-anchor="end">common ground</text>
+
+  <!-- L298N -->
+  <rect x="1100" y="215" width="270" height="160" rx="8" fill="#c62828"/>
+  <rect x="1200" y="225" width="70" height="55" rx="3" fill="#222"/>
+  <g stroke="#555" stroke-width="3">
+    <line x1="1212" y1="229" x2="1212" y2="276"/><line x1="1224" y1="229" x2="1224" y2="276"/>
+    <line x1="1236" y1="229" x2="1236" y2="276"/><line x1="1248" y1="229" x2="1248" y2="276"/>
+    <line x1="1260" y1="229" x2="1260" y2="276"/>
+  </g>
+  <text x="1235" y="308" font-size="20" font-weight="700" fill="#fff" text-anchor="middle">L298N</text>
+  <text x="1235" y="330" font-size="12" fill="#fff" text-anchor="middle">5V-EN jumper ON · ENA/ENB caps ON</text>
+  <rect x="1140" y="345" width="150" height="30" rx="3" fill="#1565c0"/>
+  <g font-size="12" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="1165" y="365">12V</text><text x="1215" y="365">GND</text><text x="1265" y="365">5V</text>
+  </g>
+  <rect x="1100" y="250" width="14" height="60" fill="#2e7d32"/>
+  <rect x="1356" y="250" width="14" height="60" fill="#2e7d32"/>
+  <g font-size="11" font-weight="700" fill="#fff">
+    <text x="1120" y="270">OUT1</text><text x="1120" y="298">OUT2</text>
+    <text x="1350" y="270" text-anchor="end">OUT3</text><text x="1350" y="298" text-anchor="end">OUT4</text>
+  </g>
+
+  <!-- motors -->
+  <rect x="915" y="260" width="38" height="40" rx="6" fill="#9e9e9e"/>
+  <rect x="950" y="252" width="80" height="56" rx="6" fill="#f4c430" stroke="#c9a227"/>
+  <circle cx="990" cy="280" r="9" fill="#fff" stroke="#c9a227"/>
+  <text x="972" y="332" font-size="14" fill="#333" text-anchor="middle">left motor</text>
+  <rect x="1517" y="260" width="38" height="40" rx="6" fill="#9e9e9e"/>
+  <rect x="1440" y="252" width="80" height="56" rx="6" fill="#f4c430" stroke="#c9a227"/>
+  <circle cx="1480" cy="280" r="9" fill="#fff" stroke="#c9a227"/>
+  <text x="1497" y="332" font-size="14" fill="#333" text-anchor="middle">right motor</text>
+
+  <!-- battery -->
+  <rect x="890" y="425" width="180" height="105" rx="10" fill="#e8f0e8" stroke="#2e7d32" stroke-width="1.5"/>
+  <rect x="905" y="440" width="130" height="34" rx="8" fill="#2e7d32"/>
+  <rect x="1035" y="449" width="8" height="16" rx="2" fill="#9e9e9e"/>
+  <rect x="905" y="482" width="130" height="34" rx="8" fill="#2e7d32"/>
+  <rect x="1035" y="491" width="8" height="16" rx="2" fill="#9e9e9e"/>
+  <g font-size="13" font-weight="700" fill="#fff" text-anchor="middle">
+    <text x="970" y="462">18650</text><text x="970" y="504">18650</text>
+  </g>
+  <text x="1056" y="461" font-size="16" font-weight="700" fill="#d62828" text-anchor="middle">+</text>
+  <text x="1056" y="511" font-size="16" font-weight="700" fill="#222" text-anchor="middle">–</text>
+  <text x="980" y="552" font-size="14" font-weight="700" fill="#1b1b1b" text-anchor="middle">2× 18650 · 7.4V</text>
+
+  <!-- NodeMCU Base, the NodeMCU sits in it -->
+  <rect x="1290" y="462" width="24" height="36" rx="3" fill="#9e9e9e"/>
+  <rect x="1326" y="420" width="220" height="125" rx="8" fill="#263238"/>
+  <rect x="1312" y="468" width="20" height="24" rx="2" fill="#111"/>
+  <text x="1336" y="510" font-size="11" fill="#cfd8dc">DC jack</text>
+  <text x="1452" y="462" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">NodeMCU Base</text>
+  <text x="1452" y="480" font-size="12" fill="#cfd8dc" text-anchor="middle">Ver 1.0 · NodeMCU sits in it</text>
+  <g fill="#f2b705" stroke="#7a5c00" stroke-width="1.5">
+    <circle cx="1360" cy="545" r="6"/><circle cx="1390" cy="545" r="6"/>
+  </g>
+  <circle cx="1510" cy="545" r="6" fill="#4a5868"/>
+  <g font-size="12" font-weight="700" text-anchor="middle">
+    <text x="1360" y="533" fill="#fff">G</text><text x="1390" y="533" fill="#fff">5V</text>
+    <text x="1510" y="533" fill="#ff8a80">VIN ✕</text>
+  </g>
+  <g font-size="14" font-weight="700" fill="#1b1b1b">
+    <text x="1412" y="570">DFPlayer VCC</text><text x="1412" y="595">DFPlayer GND</text>
+  </g>
+  <text x="1412" y="622" font-size="12" fill="#b00020">VIN has the battery's 7.4V,</text>
+  <text x="1412" y="637" font-size="12" fill="#b00020">never the DFPlayer</text>
+
+  <!-- servo supply -->
+  <rect x="1125" y="590" width="180" height="60" rx="8" fill="#455a64"/>
+  <text x="1215" y="615" font-size="15" font-weight="700" fill="#fff" text-anchor="middle">Servo supply 5–6V</text>
+  <text x="1215" y="636" font-size="12" fill="#cfd8dc" text-anchor="middle">+ → MG995 red wire</text>
+
+  <!-- ============ 3. Each part ============ -->
+  <circle cx="886" cy="726" r="14" fill="#1b1b1b"/>
+  <text x="886" y="732" font-size="16" font-weight="700" fill="#fff" text-anchor="middle">3</text>
+  <text x="910" y="733" font-size="22" font-weight="700" fill="#1b1b1b">Each part</text>
+
+  <g fill="#f4f1ea">
+    <rect x="870" y="750" width="330" height="185" rx="10"/>
+    <rect x="1220" y="750" width="330" height="185" rx="10"/>
+    <rect x="870" y="950" width="330" height="185" rx="10"/>
+    <rect x="1220" y="950" width="330" height="185" rx="10"/>
+  </g>
+  <g font-size="17" font-weight="700" fill="#1b1b1b">
+    <text x="886" y="778">L298N driver</text>
+    <text x="1236" y="778">MG995 servo (head)</text>
+    <text x="886" y="978">OLED (SSD1306)</text>
+    <text x="1236" y="978">DFPlayer Mini</text>
+  </g>
+
+  <!-- L298N card -->
+  <circle cx="894" cy="803" r="6" fill="#15803d"/>
+  <circle cx="894" cy="827" r="6" fill="#65a30d"/>
+  <circle cx="894" cy="851" r="6" fill="#be185d"/>
+  <circle cx="894" cy="875" r="6" fill="#ec4899"/>
+  <circle cx="894" cy="899" r="6" fill="#777"/>
+  <circle cx="894" cy="923" r="6" fill="#777"/>
+  <g font-size="15" font-weight="700" fill="#1b1b1b">
+    <text x="908" y="808">IN1</text><text x="908" y="832">IN2</text><text x="908" y="856">IN3</text>
+    <text x="908" y="880">IN4</text><text x="908" y="904">OUT1, OUT2</text><text x="908" y="928">OUT3, OUT4</text>
+  </g>
+  <g font-size="15" fill="#333">
+    <text x="1020" y="808">NodeMCU D5</text><text x="1020" y="832">NodeMCU D6</text><text x="1020" y="856">NodeMCU D7</text>
+    <text x="1020" y="880">NodeMCU D8</text><text x="1020" y="904">left motor</text><text x="1020" y="928">right motor</text>
+  </g>
+
+  <!-- MG995 card -->
+  <circle cx="1244" cy="803" r="6" fill="#7a4a1f"/>
+  <circle cx="1244" cy="827" r="6" fill="#d62828"/>
+  <circle cx="1244" cy="851" r="6" fill="#f07f13"/>
+  <g font-size="15" font-weight="700" fill="#1b1b1b">
+    <text x="1258" y="808">brown</text><text x="1258" y="832">red</text><text x="1258" y="856">orange</text>
+  </g>
+  <g font-size="15" fill="#333">
+    <text x="1370" y="808">servo supply –</text><text x="1370" y="832">servo supply +</text><text x="1370" y="856">NodeMCU D0</text>
+  </g>
+  <text x="1238" y="896" font-size="14" font-weight="700" fill="#b00020">Never power it from the L298N or base 5V.</text>
+
+  <!-- OLED card -->
+  <circle cx="894" cy="1003" r="6" fill="#222"/>
+  <circle cx="894" cy="1027" r="6" fill="#d62828"/>
+  <circle cx="894" cy="1051" r="6" fill="#d9a400"/>
+  <circle cx="894" cy="1075" r="6" fill="#2563eb"/>
+  <g font-size="15" font-weight="700" fill="#1b1b1b">
+    <text x="908" y="1008">GND</text><text x="908" y="1032">VCC</text><text x="908" y="1056">SCL</text><text x="908" y="1080">SDA</text>
+  </g>
+  <g font-size="15" fill="#333">
+    <text x="1020" y="1008">NodeMCU G</text><text x="1020" y="1032">NodeMCU 3V</text>
+    <text x="1020" y="1056">NodeMCU D1</text><text x="1020" y="1080">NodeMCU D2</text>
+  </g>
+
+  <!-- DFPlayer card -->
+  <circle cx="1244" cy="1003" r="6" fill="#d62828"/>
+  <circle cx="1244" cy="1027" r="6" fill="#222"/>
+  <circle cx="1244" cy="1051" r="6" fill="#7c3aed"/>
+  <circle cx="1244" cy="1075" r="6" fill="#ccc"/>
+  <circle cx="1244" cy="1099" r="6" fill="#777"/>
+  <g font-size="15" font-weight="700" fill="#1b1b1b">
+    <text x="1258" y="1008">VCC</text><text x="1258" y="1032">GND</text><text x="1258" y="1056">RX</text>
+    <text x="1258" y="1080">TX</text><text x="1258" y="1104">SPK_1, SPK_2</text>
+  </g>
+  <g font-size="15" fill="#333">
+    <text x="1370" y="1008">Base 5V pin, not VIN</text><text x="1370" y="1032">Base G, next to 5V</text>
+    <text x="1370" y="1056">D4 through 1kΩ</text><text x="1370" y="1080" fill="#999">not connected</text>
+    <text x="1370" y="1104">speaker, pins 6 + 8</text>
+  </g>
+
+  <!-- ============ Watch out ============ -->
+  <circle cx="66" cy="1001" r="14" fill="#b00020"/>
+  <text x="66" y="1007" font-size="17" font-weight="700" fill="#fff" text-anchor="middle">!</text>
+  <text x="90" y="1008" font-size="22" font-weight="700" fill="#b00020">Watch out</text>
+  <g font-size="15" fill="#333">
+    <text x="60" y="1040">• DFPlayer VCC goes on the base's 5V pin, never VIN. VIN carries the battery's 7.4V and kills it.</text>
+    <text x="60" y="1064">• Pull out the old L298N +5V → VIN wire. The base powers the NodeMCU now.</text>
+    <text x="60" y="1088">• Speaker on DFPlayer pins 6 + 8 (SPK_1, SPK_2), never pin 7 (GND).</text>
+    <text x="60" y="1112">• PAM8403 later: 5V+/5V– on the base 5V/G, DAC_L/DAC_R → L/R in, speaker on L+ and L–, never GND.</text>
+    <text x="60" y="1136">• The old PC buzzer stays off D0. Head twitches? Check the servo supply ground first.</text>
+  </g>
+</svg>
